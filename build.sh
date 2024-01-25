@@ -57,10 +57,12 @@ emcc \
   -s WASM_BIGINT=1 \
   -s ALLOW_MEMORY_GROWTH=1 \
   -s EXPORTED_RUNTIME_METHODS='["callMain","FS","NODEFS","WORKERFS","ENV"]' \
-  -s INCOMING_MODULE_JS_API='["noInitialRun","noFSInit","locateFile","preRun"]' \
+  -s INCOMING_MODULE_JS_API='["noInitialRun","noFSInit","locateFile","preRun","print","printErr"]' \
   -s NO_DISABLE_EXCEPTION_CATCHING=1 \
   -s MODULARIZE=1 \
-  -o "$ROOT/dist/qpdf.js" \
+  -s EXPORT_ES6=1 \
+  -s EXPORT_NAME="qpdf" \
+  -o "$ROOT/dist/qpdf.mjs" \
   "$ROOT/lib/qpdf/build/libqpdf/libqpdf.a" \
   "$ROOT/lib/qpdf/qpdf/qpdf.cc" \
   -I "$ROOT/lib/qpdf/include" \

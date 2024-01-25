@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>pqdf-wasm test</title>
+</head>
+
+<body>
+  <a href="assets/sample.pdf" download="sample.pdf">sample.pdf</a>
+  <a href download="removed.pdf">removed.pdf</a>
+  <script type="module">
+    import qpdf from '../dist/qpdf.mjs';
+    qpdf({
+      print: function (text) {
+        console.log('stdout: ' + text);
+      },
+      printErr: function (text) {
+        console.error('stderr: ' + text);
+      },
+    }).then(async qpdf => {
+      qpdf.callMain(["--help"]);
+      const buffer = await fetch('assets/sample.pdf').then(res => res.arrayBuffer());
+      const data = new Uint8Array(buffer);
+      qpdf.FS.mkdir('assets');
+      qpdf.FS.writeFile('assets/sample.pdf', data);
+      qpdf.FS.mkdir('out');
+      qpdf.callMain([
+        "assets/sample.pdf",
+        "--pages",
+        ".",
+        "1-2",
+        "--",
+        "out/removed.pdf",
+      ]);
+      const removed = qpdf.FS.readFile('out/removed.pdf');
+      const blob = new Blob([removed], {
+        type: 'application/pdf'
+      });
+      const url = URL.createObjectURL(blob);
+      const a = document.querySelector('a[download="removed.pdf"]');
+      a.href = url;
+    });
+  </script>
+</body>
+
+</html>
