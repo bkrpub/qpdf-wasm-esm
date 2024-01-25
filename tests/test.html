@@ -11,8 +11,8 @@
   <a href="assets/sample.pdf" download="sample.pdf">sample.pdf</a>
   <a href download="removed.pdf">removed.pdf</a>
   <script type="module">
-    import qpdf from '../dist/qpdf.mjs';
-    qpdf({
+    import QPDF from '../dist/qpdf.mjs';
+    QPDF({
       print: function (text) {
         console.log('stdout: ' + text);
       },

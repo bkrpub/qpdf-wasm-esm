@@ -4,7 +4,7 @@ This is a fork of [qpdf-wasm](https://github.com/jsscheller/qpdf-wasm/) that use
 
 It is adjusted for the browser and has the following differences due to changes in build options:
 - It is an ES module instead of a CommonJS module.
-- It names the exported default function `qpdf` instead of `Module`(default name).
+- It names the exported default function `QPDF` instead of `Module`(default name).
 - It build `qpdf.mjs` instead of `qpdf.js`.
 - It accepts overloading of the `print` and `printErr` methods.
 
