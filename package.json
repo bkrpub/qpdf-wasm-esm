@@ -1,6 +1,6 @@
 {
-  "name": "@jspawn/qpdf-wasm",
-  "version": "0.0.2",
+  "name": "@sharevb/qpdf-wasm-esm",
+  "version": "1.0.0",
   "description": "qpdf compiled to WASM",
   "main": "qpdf.js",
   "module": "qpdf.mjs",
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/jsscheller/qpdf-wasm.git"
+    "url": "https://github.com/sharevb/qpdf-wasm-esm.git"
   },
   "license": "Apache-2.0",
   "devDependencies": {
