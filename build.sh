@@ -62,6 +62,7 @@ emcc \
   -s MODULARIZE=1 \
   -s EXPORT_ES6=1 \
   -s EXPORT_NAME="qpdf" \
+  -s SINGLE_FILE=1 \
   -o "$ROOT/dist/qpdf.mjs" \
   "$ROOT/lib/qpdf/build/libqpdf/libqpdf.a" \
   "$ROOT/lib/qpdf/qpdf/qpdf.cc" \
