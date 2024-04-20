@@ -1,6 +1,6 @@
-# qpdf-wasm-esm
+# qpdf-wasm-esm-embedded
 
-This is a fork of [qpdf-wasm-esm](https://github.com/kairi003/qpdf-wasm-esm/) that uses ESM instead of CommonJS and is compiled to a single file.
+This is a fork of [qpdf-wasm-esm](https://github.com/kairi003/qpdf-wasm-esm/) that uses ESM instead of CommonJS and is compiled to a single file (wasm embedded).
 
 It is adjusted for the browser and has the following differences due to changes in build options:
 - It is an ES module instead of a CommonJS module.
@@ -20,7 +20,7 @@ Build with docker (run `./docker_build.sh`) and run see the `tests/test.html`.
 `qpdf` compiled to WASM via Emscripten. This doesn't expose the `qpdf` library - just the CLI.
 
 ```sh
-npm install --save @sharevb/qpdf-wasm-esm
+npm install --save qpdf-wasm-esm-embedded
 ```
 
 ## Examples

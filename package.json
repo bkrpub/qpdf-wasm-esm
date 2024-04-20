@@ -1,5 +1,5 @@
 {
-  "name": "@sharevb/qpdf-wasm-esm",
+  "name": "qpdf-wasm-esm-embedded",
   "version": "1.0.0",
   "description": "qpdf compiled to WASM",
   "main": "qpdf.js",
