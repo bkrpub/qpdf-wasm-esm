@@ -1,19 +1,22 @@
 {
   "name": "qpdf-wasm-esm-embedded",
-  "version": "1.0.0",
+  "version": "1.1.1",
   "description": "qpdf compiled to WASM",
-  "main": "qpdf.js",
+  "main": "qpdf.mjs",
   "module": "qpdf.mjs",
+  "types": "qpdf.d.ts",
   "scripts": {
     "test": "./node_modules/mocha/bin/mocha.js tests"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/sharevb/qpdf-wasm-esm.git"
+    "url": "git+https://github.com/sharevb/qpdf-wasm-esm.git"
   },
   "license": "Apache-2.0",
+  "dependencies": {
+    "@types/emscripten": "^1.39.10"
+  },
   "devDependencies": {
     "mocha": "^10.0.0"
-  },
-  "dependencies": {}
+  }
 }

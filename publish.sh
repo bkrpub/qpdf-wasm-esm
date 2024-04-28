@@ -1,7 +1,7 @@
 #!/bin/bash
 set -eo pipefail
 
-cp js/qpdf.mjs dist/
+cp js/qpdf.d.ts dist/
 cp js/browser.js dist/
 cp package.json dist/
 cp README.md dist/

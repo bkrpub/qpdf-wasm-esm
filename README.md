@@ -1,6 +1,6 @@
 # qpdf-wasm-esm-embedded
 
-This is a fork of [qpdf-wasm-esm](https://github.com/kairi003/qpdf-wasm-esm/) that uses ESM instead of CommonJS and is compiled to a single file (wasm embedded).
+This is a fork of [qpdf-wasm-esm](https://github.com/kairi003/qpdf-wasm-esm/) that uses ESM instead of CommonJS and is compiled to a single file (wasm embedded) with TypeScript typing.
 
 It is adjusted for the browser and has the following differences due to changes in build options:
 - It is an ES module instead of a CommonJS module.
@@ -8,6 +8,7 @@ It is adjusted for the browser and has the following differences due to changes 
 - It build `qpdf.mjs` instead of `qpdf.js`.
 - It accepts overloading of the `print` and `printErr` methods.
 - It is a single file (wasm is embedded in the main mjs)
+- It provides TypeScript typing
 
 # Examples
 
