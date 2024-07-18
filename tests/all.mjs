@@ -29,10 +29,9 @@ describe("all", function () {
 
   // Ensure this doesn't call `process.exit`
   it("should exit properly on error", async function () {
-//    const exitStatus = await callMain(["unknown-subcommand"]);
-
-    const exitStatus = await callMain(["--version"]);
-assert.equal(exitStatus, 2);
+    const exitStatus = await callMain(["unknown-subcommand"]);
+    //const exitStatus = await callMain(["--version"]);
+    assert.equal(exitStatus, 2);
   });
 });
 
